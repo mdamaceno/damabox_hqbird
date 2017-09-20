@@ -23,6 +23,10 @@ EXPOSE 3050
 EXPOSE 8082
 EXPOSE 8765
 
+RUN yum clean all
+
+RUN bash -c "rm -rf /var/cache/yum"
+
 COPY run.sh .
 
 RUN chmod a+x run.sh
