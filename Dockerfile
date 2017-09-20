@@ -17,7 +17,7 @@ RUN bash -c "./install_fb25_hqbird_server_2017r2.sh"
 
 COPY firebird.conf /opt/firebird/
 
-RUN bash -c "echo \"thread\" | /opt/firebird/bin/changeMultiConnectMode.sh"
+RUN bash -c "echo \"process\" | /opt/firebird/bin/changeMultiConnectMode.sh"
 
 EXPOSE 3050
 EXPOSE 8082
