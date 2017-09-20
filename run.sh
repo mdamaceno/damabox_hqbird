@@ -1,7 +1,7 @@
 #!/bin/bash
 
-service hqbird start
-service firebird start
+# service hqbird start
 
-tail -n 100 /var/log/dataguard32.log
-tail -f /var/log/dataguard32.log
+/opt/firebird/bin/fb_smp_server &
+
+service hqbird console
