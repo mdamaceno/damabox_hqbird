@@ -2,6 +2,6 @@
 
 # service hqbird start
 
-/opt/firebird/bin/fb_smp_server &
+/opt/firebird/bin/firebird &
 
 service hqbird console
