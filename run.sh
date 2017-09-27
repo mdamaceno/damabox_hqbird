@@ -5,4 +5,6 @@
 # /opt/firebird/bin/fb_smp_server &
 ${PREFIX}/bin/fbguard &
 
-service hqbird console
+service hqbird console &
+
+tail -f /opt/firebird/firebird.log
