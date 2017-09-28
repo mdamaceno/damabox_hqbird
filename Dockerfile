@@ -18,7 +18,7 @@ COPY ./config/firebird/firebird.conf /opt/firebird/
 RUN bash -c "echo \"thread\" | ${PREFIX}/bin/changeMultiConnectMode.sh"
 
 EXPOSE 3050/tcp
-EXPOSE 8083/tcp
+EXPOSE 8082/tcp
 EXPOSE 8765/tcp
 
 VOLUME ["/databases", "/opt/firebird"]
