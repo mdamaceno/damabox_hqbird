@@ -26,7 +26,7 @@ COPY ./config/firebird/firebird.conf /opt/firebird/
 RUN bash -c "echo \"\" | /opt/firebird/bin/changeServerMode.sh"
 
 EXPOSE 3050
-EXPOSE 8083
+EXPOSE 8082
 EXPOSE 8765
 
 RUN yum clean all
