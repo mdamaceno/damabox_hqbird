@@ -14,7 +14,8 @@ RUN bash -c "mkdir /databases"
 COPY ./scripts/install_fb25_hqbird_server_2017r2.sh .
 RUN chmod a+x install_fb25_hqbird_server_2017r2.sh
 RUN bash -c "./install_fb25_hqbird_server_2017r2.sh"
-COPY ./config/firebird/firebird.conf /opt/firebird/
+COPY ./config/firebird/conf/firebird.conf ${PREFIX}
+COPY ./config/firebird/UDF ${PREFIX}/UDF
 RUN bash -c "echo \"thread\" | ${PREFIX}/bin/changeMultiConnectMode.sh"
 
 EXPOSE 3050/tcp
